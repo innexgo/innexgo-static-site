@@ -1,24 +1,14 @@
-'use strict';
+"use strict"
 
 /* global moment */
 
 const INT32_MAX = 0xffffffff;
 
-/**
- * Returns a promise that will be resolved in some milliseconds
- * use await sleep(some milliseconds)
- * @param {int} ms milliseconds to sleep for
- * @return {Promise} a promise that will resolve in ms milliseconds
- */
+// use await sleep(some milliseconds)
 function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**
- * Checks if a string is null or has no length
- * @param {String} str the string to check
- * @return {boolean} false if the string is null or it has zero length
- */
 function isEmpty(str) {
   return (!str || 0 === str.length);
 }
@@ -29,6 +19,7 @@ function staticUrl() {
 
 function apiUrl() {
   return staticUrl() + '/api';
+  // return 'http://99.103.193.239:8080/api/';
 }
 
 function escapeHtml(unsafe) {
@@ -111,10 +102,6 @@ function giveTempSuccess(innerHTML) {
   giveAlert(innerHTML, 'alert-success', false);
 }
 
-function givePermSuccess(innerHTML) {
-  giveAlert(innerHTML, 'alert-success', true);
-}
-
 function giveTempInfo(innerHTML) {
   giveAlert(innerHTML, 'alert-info', false);
 }
@@ -127,11 +114,21 @@ function linkRelative(text, url) {
   return linkAbsolute(text, staticUrl() + url);
 }
 
-// Fetches json given a URL
-async function fetchJson(url, params={}) {
-  let response = await fetch(url, params);
+// Returns a promise for the json given the response
+function parseResponse(response) {
   if (!response.ok) {
-    throw Error(await response.text());
+    console.log(response);
+    throw Error(response.statusText);
+  }
+  return response.json();
+}
+
+// Fetches json given a URL
+async function fetchJson(url) {
+  let response = await fetch(url);
+  if (!response.ok) {
+    console.log(response);
+    throw Error(response.statusText);
   }
   return response.json();
 }

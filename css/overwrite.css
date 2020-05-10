@@ -1,3 +1,4 @@
+
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
   max-width: 100%;
@@ -26,9 +27,9 @@ img {
 }
 
 body {
-  margin: 0;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 13px;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 13px;
   line-height: 1.6em;
   color: #666;
   background-color: #ffffff;
@@ -46,8 +47,8 @@ p {
 }
 
 .well ul {
-  list-style:none;
-  margin-left:0
+	list-style:none;
+	margin-left:0
 }
 
 a {
@@ -56,18 +57,18 @@ a {
 }
 
 a:hover {
-  color: #005580;
-  text-decoration: underline;
+	color: #005580;
+	text-decoration: underline;
 }
 
 h2, h3, h4, h5, h6 {
-  color:#333;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight:400;
-  line-height:1.5em;
-  letter-spacing:-1px;
-  margin-top:0;
-  margin-bottom:20px;
+	color:#333;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight:400;
+	line-height:1.5em;
+	letter-spacing:-1px;
+	margin-top:0;
+	margin-bottom:20px;
 }
 
 h1 {
@@ -111,7 +112,7 @@ h4 small {
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
-  font-weight:700;
+	font-weight:700;
 }
 
 .img-polaroid {
@@ -154,9 +155,9 @@ pre code {
 }
 
 blockquote {
-  padding: 0;
-  border: none;
-  page-break-inside: avoid;
+	padding: 0;
+    border: none;
+    page-break-inside: avoid;
 }
 
 fieldset {
@@ -169,6 +170,90 @@ legend {
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
+
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	font-size: 13px;
+	border:none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: none;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  font-size: 13px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+
 
 .uneditable-input,
 .uneditable-textarea {
@@ -276,7 +361,7 @@ select:focus:invalid:focus {
 }
 
 .input-append .form-search input,.input-append .form-search button {
-  border:none;
+	border:none;
 }
 
 .input-append input,
@@ -568,7 +653,7 @@ input.search-query {
 }
 
 .well {
-  border:none;
+	border:none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -599,7 +684,9 @@ button.close {
 
 .btn {
   display: inline-block;
+  *display: inline;
   /* IE7 inline-block hack */
+  *zoom: 1;
   padding: 4px 12px;
   margin-bottom: 0;
   font-size: 13px;
@@ -611,15 +698,22 @@ button.close {
   text-shadow: none;
   background-color: #ddd;
   border-color: none;
+  *background-color: #ddd;
   background-image: none;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: none;
   border: none;
+  *border: 0;
   border-bottom-color: none;
+  *margin-left: .3em;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
+
+
+
 
 
 .btn:hover,
@@ -629,6 +723,7 @@ button.close {
 .btn[disabled] {
   color: #333333;
   background-color: #e6e6e6;
+  *background-color: #d9d9d9;
 }
 
 .btn:active,
@@ -636,10 +731,20 @@ button.close {
   background-color: #cccccc \9;
 }
 
+.btn:first-child {
+  *margin-left: 0;
+}
+
 .btn:hover {
   color: #333333;
   text-decoration: none;
   background-position: 0 -15px;
+}
+
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 .btn.active,
@@ -794,6 +899,7 @@ button.close {
 .btn-primary[disabled] {
   color: #ffffff;
   background: #065158;
+  *background-color: #065158;
 }
 
 .btn-primary:active,
@@ -805,6 +911,7 @@ button.close {
   color: #ffffff;
   text-shadow: none;
   background-color: #e2b12d;
+  *background-color: #e2b12d;
   background-image: none;
   border-color: none;
   filter:none;
@@ -818,6 +925,7 @@ button.close {
 .btn-warning[disabled] {
   color: #ffffff;
   background: #b88f22;
+  *background: #b88f22;
 }
 
 .btn-warning:active,
@@ -843,6 +951,7 @@ button.close {
 .btn-danger[disabled] {
   color: #ffffff;
   background: #db5f58;
+  *background: #db5f58;
 }
 
 .btn-danger:active,
@@ -854,6 +963,7 @@ button.close {
   color: #ffffff;
   text-shadow: none;
   background-color: #60d7a9;
+  *background-color: #60d7a9;
   background-image: none;
   border-color: none;
   filter:none;
@@ -867,7 +977,9 @@ button.close {
 .btn-success[disabled] {
   color: #ffffff;
   background: #55ba93;
+  *background: #55ba93;
 }
+
 .btn-success:active,
 .btn-success.active {
   background: #55ba93 \9;
@@ -877,6 +989,7 @@ button.close {
   color: #ffffff;
   text-shadow: none;
   background-color: #7bb7fa;
+  *background-color: #7bb7fa;
   background-image: none;
   border-color: none;
   filter:none;
@@ -890,48 +1003,12 @@ button.close {
 .btn-info[disabled] {
   color: #ffffff;
   background: #6a9ad0;
+  *background: #6a9ad0;
 }
 
 .btn-info:active,
 .btn-info.active {
   background: #6a9ad0 \9;
-}
-
-.btn-dark {
-  color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
-}
-
-.btn-dark:hover {
-  color: #fff;
-  background-color: #23272b;
-  border-color: #1d2124;
-}
-
-.btn-dark:focus, .btn-dark.focus {
-  color: #fff;
-  background-color: #23272b;
-  border-color: #1d2124;
-  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
-}
-
-.btn-dark.disabled, .btn-dark:disabled {
-  color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
-}
-
-.btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,
-.show > .btn-dark.dropdown-toggle {
-  color: #fff;
-  background-color: #1d2124;
-  border-color: #171a1d;
-}
-
-.btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus,
-.show > .btn-dark.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
 .btn-inverse {
@@ -952,6 +1029,7 @@ button.close {
 .btn-inverse[disabled] {
   color: #ffffff;
   background: #2b2a2a;
+  *background: #2b2a2a;
 }
 
 .btn-inverse:active,
@@ -1005,7 +1083,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .btn-link {
-  border:none;
+	border:none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -1025,10 +1103,17 @@ input[type="submit"].btn.btn-mini {
 .btn-group {
   position: relative;
   display: inline-block;
+  *display: inline;
   /* IE7 inline-block hack */
+  *zoom: 1;
   font-size: 0;
   vertical-align: middle;
   white-space: nowrap;
+  *margin-left: .3em;
+}
+
+.btn-group:first-child {
+  *margin-left: 0;
 }
 
 .btn-group > .btn {
@@ -1323,8 +1408,8 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
   background-color: none;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 }
 
 .navbar-inverse .nav .active > a,
@@ -1408,6 +1493,9 @@ input[type="submit"].btn.btn-mini {
   background: #ededed;
   border-color: #e5e5e5;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e5e5e5;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1491,6 +1579,9 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .btn-navbar {
   border-color: #040404;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background: #040404;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
 
@@ -1510,8 +1601,8 @@ input[type="submit"].btn.btn-mini {
 
 
 .breadcrumb li span {
-  color:#aaa;
-  padding:0 5px;
+	color:#aaa;
+	padding:0 5px;
 }
 
 .pagination ul {
@@ -1775,7 +1866,7 @@ a.thumbnail:hover {
 }
 
 .progress .bar {
-  background-color: #09828c;
+	background-color: #09828c;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
